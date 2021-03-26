@@ -37,7 +37,10 @@ $config  = array(
                         'flashManager'      => ['class' => 'frontend\components\FrontFlashManager'],
                         'languageManager'   => ['class' => 'usni\library\components\LanguageManager'],
                         'moduleManager'      => ['class' => 'usni\library\components\ModuleManager'],
-                        'currencyManager'    => ['class' => 'common\modules\localization\modules\currency\components\CurrencyManager'],
+                        'currencyManager'    => [
+                            'class' => 'common\modules\localization\modules\currency\components\CurrencyManager',
+                            'defaultCurrencyCode' => 'EUR',
+                        ],
                         'storeManager'       => ['class' => 'common\modules\stores\components\StoreManager'],
                         'view'               => ['class' => 'frontend\web\View'],
                         'maintenanceManager' => ['class' => 'usni\library\components\MaintenanceManager', 

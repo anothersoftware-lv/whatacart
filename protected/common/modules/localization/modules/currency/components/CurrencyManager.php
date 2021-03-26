@@ -17,6 +17,8 @@ class CurrencyManager extends \yii\base\Component
      * @var array
      */
     public $currencies;
+
+    public $defaultCurrencyCode;
     
     /**
      * Default currency.
