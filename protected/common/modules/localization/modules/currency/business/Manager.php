@@ -6,6 +6,7 @@
 namespace common\modules\localization\modules\currency\business;
 
 use common\modules\localization\modules\currency\dao\CurrencyDAO;
+use usni\UsniAdaptor;
 use yii\base\InvalidParamException;
 use usni\library\utils\CacheUtil;
 use usni\library\utils\ArrayUtil;
@@ -83,7 +84,7 @@ class Manager extends \usni\library\business\Manager
      */
     public function getDefault()
     {
-        $currency = Currency::find()->where('value = :value', [':value' => 1])->asArray()->one();
+        $currency = Currency::find()->where('code = :code', [':code' => UsniAdaptor::app()->currencyManager->defaultCurrencyCode])->asArray()->one();
         return $currency['code'];
     }
 }
