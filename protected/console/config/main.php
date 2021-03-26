@@ -14,7 +14,10 @@ $config  = ArrayHelper::merge(
                                     'components'        => [
                                                             'user'          => ['loginUrl' => ['/users/default/login'], 'class' => 'usni\library\console\ConsoleUser'],
                                                             'languageManager'   => ['class' => 'usni\library\components\LanguageManager'],
-                                                            'currencyManager'   => ['class' => 'common\modules\localization\modules\currency\components\CurrencyManager'],
+                                                            'currencyManager'   => [
+                                                                'class' => 'common\modules\localization\modules\currency\components\CurrencyManager',
+                                                                'defaultCurrencyCode' => 'EUR',
+                                                            ],
                                                             'storeManager'      => ['class' => 'common\modules\stores\components\StoreManager']
                                                             ]                                    
                     )

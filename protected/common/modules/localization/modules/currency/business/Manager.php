@@ -84,7 +84,8 @@ class Manager extends \usni\library\business\Manager
      */
     public function getDefault()
     {
-        $currency = Currency::find()->where('code = :code', [':code' => UsniAdaptor::app()->currencyManager->defaultCurrencyCode])->asArray()->one();
+        $defaultCode = UsniAdaptor::app()->currencyManager->defaultCurrencyCode;
+        $currency = Currency::find()->where('code = :code', [':code' => $defaultCode])->asArray()->one();
         return $currency['code'];
     }
 }
