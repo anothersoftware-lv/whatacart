@@ -67,7 +67,8 @@ class Manager extends \common\business\Manager
             $completedOrderStatus   = OrderStatusTranslated::find()->where('name = :name AND language = :lang', 
                                                                            [':name' => Order::STATUS_COMPLETED, ':lang' => $this->language])
                                                                            ->asArray()->one();
-            if($order->status == $completedOrderStatus['owner_id'])
+            $ownerId = $completedOrderStatus['owner_id'] ?? null;
+            if($order->status == $ownerId)
             {
                 throw new Exception(UsniAdaptor::t('order', 'Order could not be updated.'));
             }
