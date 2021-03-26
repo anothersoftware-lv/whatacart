@@ -14,7 +14,7 @@ $terms      = $formDTO->getTerms();
     <div class="modal-dialog">
         <div class="modal-content">
             <div class="modal-body">
-                <?php echo $terms['content'];?>
+                <?php echo $terms['content'] ?? '';?>
             </div>
         </div>
     </div>
