@@ -26,7 +26,10 @@ $config  = array(
                                                     'sidenavView'=> '@app/views/site/_sidenav.php'
                                                 ],
                         'languageManager'   => ['class' => 'usni\library\components\LanguageManager'],
-                        'currencyManager'   => ['class' => 'common\modules\localization\modules\currency\components\CurrencyManager'],
+                        'currencyManager'   => [
+                            'class' => 'common\modules\localization\modules\currency\components\CurrencyManager',                             
+                            'defaultCurrencyCode' => 'EUR',
+                        ],
                         'storeManager'      => ['class' => 'common\modules\stores\components\StoreManager'],
                         'session'           => [
                                                     'name' => 'PHPBACKSESSID'
