@@ -172,7 +172,7 @@ class SiteManager extends Manager
         $user       = UserDAO::activateUser($tableName, $hash, $email);  
         if ($user !== false)
         {
-            $permissions = ['customer.update', 'customer.view', 'customer.changepassword'];
+            $permissions = ['customer.update', 'customer.view', 'customer.change-password'];
             UsniAdaptor::app()->authorizationManager->addAssignments($permissions, $user['username'], 'customer');
             return true;
         }
