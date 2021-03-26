@@ -48,7 +48,7 @@ trait OrderStatusTrait
     {
         $record     = OrderStatusTranslated::find()->where('name = :name AND language = :language', 
                                                                          [':name' => $statusLabel, ':language' => $language])->asArray()->one();
-        return $record['owner_id'];
+        return $record['owner_id'] ?? null;
     }
     
     /**
