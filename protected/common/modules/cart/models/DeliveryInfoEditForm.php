@@ -5,6 +5,9 @@
  */
 namespace cart\models;
 
+use usni\library\utils\ArrayUtil;
+use usni\UsniAdaptor;
+
 /**
  * DeliveryInfoEditForm class file
  * @package cart\models
@@ -25,5 +28,10 @@ class DeliveryInfoEditForm extends BillingInfoEditForm
         $rules      = parent::rules();
         $rules[]    = ['sameAsBillingAddress', 'boolean'];
         return $rules;
+    }
+    
+    public function attributeLabels()
+    {
+        return ArrayUtil::merge(parent::attributeLabels(), ['sameAsBillingAddress' => UsniAdaptor::t('users', 'Same As Billing Address')]);
     }
 }
