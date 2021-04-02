@@ -68,7 +68,7 @@ return [
     'Front' => 'Fasāde',
     'General' => 'Konts',
     'Home' => 'Sākumlapa',
-    'I agree to' => 'Iepazinos un piekrītu',
+    'I agree to' => 'Apliecinu, ka iepazinos un piekrītu sekojošiem iegādes nosacījumiem:',
     'Id' => 'Identifikators',
     'Image' => 'Attēls',
     'Images' => 'Attēli',
