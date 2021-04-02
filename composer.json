@@ -10,8 +10,8 @@
     },
     "minimum-stability": "stable",
     "require": {
-        "php": ">=5.4.0",
-        "yiisoft/yii2": "2.0.15.1",
+        "php": ">=7.4",
+        "yiisoft/yii2": ">=2.0.4",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "2.0.7",
         "branchonline/yii2-lightbox": "*",
@@ -23,7 +23,8 @@
 		"kartik-v/bootstrap-star-rating": "@dev",
         "marqu3s/yii2-summernote": "dev-master",
         "fortawesome/font-awesome": "v4.7.0",
-        "ushainformatique/yiichimp": "*"
+        "ushainformatique/yiichimp": "*",
+        "kartik-v/yii2-widget-select2": "dev-master"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",
@@ -40,5 +41,11 @@
               "bower-asset-library": "vendor/bower"
             }
           }
-    }
+    },
+    "repositories": [
+      {
+        "type": "git",
+        "url": "gitlab:anothersoftware-whatacart/core/yiichimp.git"
+      }
+    ]
 }

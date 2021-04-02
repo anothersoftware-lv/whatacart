@@ -99,8 +99,11 @@ abstract class BasePaymentProcessor extends \yii\base\Component
      */
     public function init()
     {
+        parent::init();
+        
         $this->selectedStoreId  = UsniAdaptor::app()->storeManager->selectedStoreId;
         $this->language = UsniAdaptor::app()->languageManager->selectedLanguage;
+        //@FIXME - not working
         $this->selectedCurrency  = UsniAdaptor::app()->currencyManager->selectedCurrency;
     }
     
@@ -129,6 +132,9 @@ abstract class BasePaymentProcessor extends \yii\base\Component
      */
     public function saveInitialPaymentDetails()
     {
+        //Fixes empty selectedCurrency bug
+        $this->selectedCurrency = UsniAdaptor::app()->currencyManager->selectedCurrency;
+    
         $this->isNewRecord      = $this->order->isNewRecord;
         $transaction            = UsniAdaptor::db()->beginTransaction();
         try
