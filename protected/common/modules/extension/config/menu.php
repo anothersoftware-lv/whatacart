@@ -11,6 +11,10 @@ if(UsniAdaptor::app()->user->can('access.extension'))
                 'itemOptions' => ['class' => 'navblock-header'],
                 'items'       => [
                                     [
+                                        'label'       => UsniAdaptor::t('extension', 'Installer'),
+                                        'url'         => ['/extension/upload/create'],
+                                    ],
+                                    [
                                         'label'       => UsniAdaptor::t('extension', 'Enhancements'),
                                         'url'         => ['/enhancement/default/index'],
                                     ],
