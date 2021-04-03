@@ -47,6 +47,7 @@ class BeforeActionBehavior extends Behavior
             {
                 UsniAdaptor::app()->configManager->load();
                 $this->setLanguageData();
+                $this->setTheme();
                 $this->setStoresData();
                 $this->setCurrencyData();
                 $this->setComponents();
@@ -54,6 +55,36 @@ class BeforeActionBehavior extends Behavior
             }
         }
     }
+    
+    /**
+     * Set store theme
+     */
+    public function setTheme()
+    {
+        //@FIXME - not works for backend
+        //$selectedStore = UsniAdaptor::app()->storeManager->selectedStore;
+    
+        //  Stupid tmp fix
+        $selectedStore = ['theme' => 'lm-whatacart']; 
+        
+        if($selectedStore['theme'] != null)
+        {
+            $themeName = $selectedStore['theme'];
+    
+            $themeConfig = [
+                'basePath' => '@webroot/themes/' . $themeName,
+                'baseUrl' => '@web/themes/' . $themeName,
+                'class'   => 'yii\base\Theme',
+                'pathMap' => [
+                    '@app/views' => '@webroot/themes/' . $themeName,
+                    '@app/modules' => '@webroot/themes/' . $themeName . '/modules',
+                    '@common/modules' => '@webroot/themes/' . $themeName . '/modules'
+                ]
+            ];
+            UsniAdaptor::app()->view->theme = \Yii::createObject($themeConfig);
+        }
+    }
+    
     
     /**
      * Set stores data
