@@ -40,5 +40,11 @@
               "bower-asset-library": "vendor/bower"
             }
           }
-    }
+    },
+    "repositories": [
+      {
+        "type": "git",
+        "url": "gitlab:anothersoftware-whatacart/core/yiichimp.git"
+      }
+    ]
 }
