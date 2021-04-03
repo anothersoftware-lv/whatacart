@@ -6,7 +6,6 @@
 namespace common\utils;
 
 use usni\UsniAdaptor;
-use common\utils\ApplicationUtil;
 use cart\models\Cart;
 use yii\base\Model;
 use products\models\CompareProducts;
