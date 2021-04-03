@@ -10,6 +10,7 @@ return ArrayHelper::merge(
                                             'installed'     => $installed,
                                             'name'          => $siteName,
                                             'version'       => '2.0.6',
+                                            'language'      => 'lv',
                                             'poweredByName' => 'WhatACart',
                                             'poweredByUrl'  => 'http://whatacart.com',
                                             'environment'   => $environment,
