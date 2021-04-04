@@ -16,7 +16,6 @@ $rows = $detailViewDTO->getHistoryRecords();
                     <th><?php echo UsniAdaptor::t('customer', 'Status'); ?></th>
                     <th><?php echo UsniAdaptor::t('customer', 'Date Added'); ?></th>
                     <th><?php echo UsniAdaptor::t('application', 'Comment'); ?></th>
-                    <th><?php echo UsniAdaptor::t('customer', 'Customer Notified'); ?></th>
                 </tr>
             </thead>
             <?php
@@ -32,7 +31,6 @@ $rows = $detailViewDTO->getHistoryRecords();
                             <td><?php echo StatusLabel::widget(['model' => $row]);?></td>
                             <td><?php echo DateTimeUtil::getFormattedDateTime($row['created_datetime']) ?></td>
                             <td><?php echo $row['comment'] ?></td>
-                            <td><?php echo (bool) $row['notify_customer'] == true ? UsniAdaptor::t('application', 'Yes') : UsniAdaptor::t('application', 'No') ?></td>
                         </tr>
                         <?php
                     }
