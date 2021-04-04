@@ -156,7 +156,7 @@ class Manager extends \common\business\Manager
             $orderProducts  = OrderDAO::getOrderProducts($orderId, $this->language, true);
             $detailViewDTO->setOrderProducts($orderProducts);
             //History records
-            $historyRecords = OrderDAO::getOrderHistory($orderId, $this->language);
+            $historyRecords = OrderDAO::getOrderHistory($orderId, $this->language, true);
             if(!empty($historyRecords))
             {
                 foreach($historyRecords as $index => $historyRecord)

@@ -150,14 +150,21 @@ class OrderDAO
      * @param string $language
      * @return array
      */
-    public static function getOrderHistory($id, $language)
+    public static function getOrderHistory($id, $language, $includeSilent = false)
     {
         $tableName          = UsniAdaptor::tablePrefix() . 'order_history';
         $trTableName        = UsniAdaptor::tablePrefix() . 'order_history_translated';
         $dependency         = new DbDependency(['sql' => "SELECT MAX(modified_datetime) FROM $tableName"]);
         $sql                = "SELECT oh.*, oht.comment
                                    FROM $tableName oh, $trTableName oht
-                                   WHERE oh.order_id = :oid AND oh.id = oht.owner_id AND oht.language = :lan";
+                                   WHERE oh.order_id = :oid
+                                     AND oh.id = oht.owner_id
+                                     AND oht.language = :lan
+                                     AND  (oh.notify_customer = 1";
+        if ($includeSilent) {
+            $sql .= " OR oh.notify_customer = 0";
+        }
+        $sql .= ")";
         $connection         = UsniAdaptor::app()->getDb();
         return $connection->createCommand($sql, [':oid' => $id, ':lan' => $language])->cache(0, $dependency)->queryAll();
     }
