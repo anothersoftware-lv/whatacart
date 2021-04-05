@@ -54,7 +54,8 @@ class StatusLabel extends \yii\bootstrap\Widget
      */
     public function getLabelWidget($value, $id)
     {
-        $labelWidget = null;
+        $labelWidget = $value;
+        
         if ($value == UsniAdaptor::t('order', 'Completed'))
         {
             $labelWidget = Label::widget(['content' => $value, 'modifier' => Html::COLOR_SUCCESS, 'id' => $id]);
