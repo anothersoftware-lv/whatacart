@@ -99,8 +99,11 @@ abstract class BasePaymentProcessor extends \yii\base\Component
      */
     public function init()
     {
+        parent::init();
+        
         $this->selectedStoreId  = UsniAdaptor::app()->storeManager->selectedStoreId;
         $this->language = UsniAdaptor::app()->languageManager->selectedLanguage;
+        //@FIXME - not working
         $this->selectedCurrency  = UsniAdaptor::app()->currencyManager->selectedCurrency;
     }
     
@@ -129,6 +132,9 @@ abstract class BasePaymentProcessor extends \yii\base\Component
      */
     public function saveInitialPaymentDetails()
     {
+        //Fixes empty selectedCurrency bug
+        $this->selectedCurrency = UsniAdaptor::app()->currencyManager->selectedCurrency;
+    
         $this->isNewRecord      = $this->order->isNewRecord;
         $transaction            = UsniAdaptor::db()->beginTransaction();
         try
@@ -218,7 +224,9 @@ abstract class BasePaymentProcessor extends \yii\base\Component
             $attributes['modified_by'] = $this->customerId;
             $attributes['modified_datetime'] = UsniAdaptor::getNow();
             $address    = OrderDAO::getOrderAddress($this->order->id, $type);
-            UsniAdaptor::app()->db->createCommand()->update($tableName, $attributes, 'id = :id', [':id' => $address['id']])->execute();
+            if ($address) {
+                UsniAdaptor::app()->db->createCommand()->update($tableName, $attributes, 'id = :id', [':id' => $address['id']])->execute();
+            }
         }
     }
     
