@@ -32,7 +32,9 @@ $config  = array(
                         ],
                         'storeManager'      => ['class' => 'common\modules\stores\components\StoreManager'],
                         'session'           => [
-                                                    'name' => 'PHPBACKSESSID'
+                                                    'name' => 'PHPBACKSESSID',
+                                                    'class' => 'yii\web\DbSession',
+                                                    'sessionTable' => 'tbl_session_backend',
                                                ],
                         'cookieManager'     => [
                                                     'class' => 'common\web\CookieManager',
