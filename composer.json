@@ -46,13 +46,7 @@
     },
     "config": {
         "process-timeout": 1800,
-        "vendor-dir": "vendor",
-        "fxp-asset": {
-            "installer-paths": {
-              "npm-asset-library": "vendor/npm",
-              "bower-asset-library": "vendor/bower"
-            }
-          }
+        "vendor-dir": "vendor"
     },
     "repositories": [
       {
