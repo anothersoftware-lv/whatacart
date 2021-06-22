@@ -34,19 +34,46 @@ $widgetParams   = [
                         'modelClass'    => Order::className(),
                         'columns' => [
                             ['class' => CheckboxColumn::className()],
-                            'unique_id',
-                            'name',
-                            [
-                                'label'         => UsniAdaptor::t('customer', 'Customer'),
-                                'attribute'     => 'customer_id',
-                                'value'         => 'username',
-                                'filter'        => $gridViewDTO->getCustomerFilterData()
-                            ],
                             [
                                 'attribute'     => 'status',
                                 'class'         => OrderStatusDataColumn::className(),
                                 'filter'        => $gridViewDTO->getStatusData()
                             ],
+                            'modified_datetime' => [
+                                'value' => function($values) {
+                                    $value = date("m.d.Y H:s:i", strtotime($values['modified_datetime']));
+                                    return $value;
+                                },
+                            ],
+                            'unique_id',
+                            [
+                                'label'         => UsniAdaptor::t('customer', 'Customer'),
+                                'attribute'     => 'customer_id',
+                                'format' => 'raw',
+                                'value'         => function($model) {
+                                    $content = \yii\bootstrap\Html::a(
+                                        $model['name'],
+                                        ['//order/default/view/', 'id' => $model['id']]
+                                    ) . '</b> ';
+                                    
+                                    /*$content .= \yii\bootstrap\Html::a(
+                                            
+                                            ['//order/default/update/', 'id' => $model['id']],
+                                            ['target' => '_blank']
+                                        ) . ' ';*/
+
+
+                                    return $content;
+                                },
+                                'filter'        => $gridViewDTO->getCustomerFilterData()
+                            ],
+                            [
+                                'class'         => OrderActionColumn::className(),
+                                'template'      =>
+                                    '{view} {update} {delete} {invoice} {paymentactivity} {viewpayments}',
+                                    //'{delete} {paymentactivity} {viewpayments}',
+                                'modelClassName' => Order::className()
+                            ], 
                             [
                                 'label'         => UsniAdaptor::t('order', 'Amount'),
                                 'attribute'     => 'amount'
@@ -57,17 +84,13 @@ $widgetParams   = [
                                 'value'         => 'shipping_method_name',
                                 'filter'        => $gridViewDTO->getShippingMethods()
                             ],
+                            'name',
                             [
                                 'label'         => UsniAdaptor::t('payment', 'Payment Method'),
                                 'attribute'     => 'payment_method',
                                 'value'         => 'payment_method_name',
                                 'filter'        => $gridViewDTO->getPaymentMethods()
                             ],
-                            [
-                                'class'         => OrderActionColumn::className(),
-                                'template'      => '{view} {update} {delete} {invoice} {paymentactivity} {viewpayments}',
-                                'modelClassName' => Order::className()
-                            ]
                         ],
                 ];
 echo ActionToolbar::widget($toolbarParams);

@@ -9,7 +9,7 @@ use usni\UsniAdaptor;
 use cart\models\Cart;
 use yii\base\Model;
 use products\models\CompareProducts;
-use cart\models\Checkout;
+use cart\models\CheckoutCustom as Checkout;
 use wishlist\models\Wishlist;
 /**
  * ApplicationUtil class file.
@@ -114,6 +114,22 @@ class ApplicationUtil
             return UsniAdaptor::app()->user->getIdentity()->id;
         }
     }
+
+    public static function getCustomerInfo()
+    {
+        if(UsniAdaptor::app()->user->getIsGuest())
+        {
+            return 0;
+        }
+        else
+        {
+            $id = UsniAdaptor::app()->user->getIdentity()->id;
+
+            $customer = CustomerDAO::getInfoById($id);
+
+            return $customer;
+        }
+    }
     
     /**
      * Is cart empty
@@ -127,5 +143,35 @@ class ApplicationUtil
             return true;
         }
         return false;
+    }
+
+    public static function getI18nBAsePath() {
+        return '@approot/messages';
+    }
+
+    public static function getTranslationLanguage() {
+        return null !== UsniAdaptor::app()->languageManager->selectedLanguage
+            ? UsniAdaptor::app()->languageManager->selectedLanguage
+            : 'lv';
+    }
+
+    public static function isHomePage()
+    {
+        $controller = UsniAdaptor::app()->controller;
+        $default_controller = UsniAdaptor::app()->defaultRoute;
+        $isHome = $controller->action->id === $controller->defaultAction
+            ? true
+            : false;
+
+        return $isHome;
+    }
+
+    public static function bytesToSize($bytes) {
+        $sizes = ['Bytes', 'KB', 'MB', 'GB', 'TB'];
+        if ($bytes == 0) {
+            return '0 Byte';
+        }
+        $i = intval(floor(log($bytes) / log(1024)));
+        return round($bytes / pow(1024, $i), 2) . ' ' . $sizes[$i];
     }
 }

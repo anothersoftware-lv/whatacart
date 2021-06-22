@@ -42,21 +42,30 @@ $config  = array(
                             'defaultCurrencyCode' => 'EUR',
                         ],
                         'storeManager'       => ['class' => 'common\modules\stores\components\StoreManager'],
-                        'view'               => ['class' => 'frontend\web\View'],
+                        'view'               => // Modified by LM extension
+//['class' => 'frontend\web\View'] //Whatacart View
+['class' => 'frontend\web\LMView'],
                         'maintenanceManager' => ['class' => 'usni\library\components\MaintenanceManager', 
                                                  'url' => 'site/default/maintenance'],
                         'guest'              => ['class' => 'frontend\components\Guest'],
                         'customer'           => ['class' => 'frontend\components\Customer'],
                         'errorHandler'      => ['errorAction' => 'site/default/error'],
                         'session'           => [
-                                                    'name' => 'PHPFRONTSESSID'
+                                                    'name' => 'PHPFRONTSESSID',
+                                                    'class' => 'yii\web\DbSession',
+                                                    'sessionTable' => 'tbl_session',
                                                 ],
                         'cookieManager'     => [
                                                 'class' => 'common\web\CookieManager',
                                                 'contentLanguageCookieName' => 'whatacartFrontContentLanguage',
                                                 'applicationStoreCookieName' => 'whatacartFrontStore',
                                                 'applicationCurrencyCookieName' => 'whatacartFrontCurrency'
-                                            ]
+                                            ],
+                        'request' => [
+                            'parsers' => [
+                                'application/json' => 'yii\web\JsonParser',
+                            ]
+                        ],
                     ),
                     'as beforeAction'   => ['class' => 'frontend\web\BeforeActionBehavior']
                 );

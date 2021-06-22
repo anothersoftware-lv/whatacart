@@ -18,7 +18,6 @@ class TabbedActiveForm extends ActiveForm
      */
     public function run()
     {
-        parent::run();
         if ($this->enableClientScript)
         {
             $formId             = $this->getId();

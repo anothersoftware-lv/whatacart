@@ -114,7 +114,7 @@ trait DimensionTrait
      */
     public function convertDimensionsToUnit($sourceUnit, $conversionUnit, $product)
     {
-        //Source Unit - Centimeter
+        //LmImportSource Unit - Centimeter
         //Target unit - Meter
         $unitMap        = self::getDimensionUnitMap();
         $operatorMap    = $unitMap[$sourceUnit][$conversionUnit];

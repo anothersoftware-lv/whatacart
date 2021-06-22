@@ -1,0 +1,296 @@
+2021-04-02 21:55:50 [-][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\console\Request::getUserIP() in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(407): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(336): yii\debug\Module->checkAccess()
+#2 [internal function]: yii\debug\Module->setDebugHeaders()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php(628): call_user_func()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/web/Response.php(345): yii\base\Component->trigger()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#6 /mnt/www/projekti/precesikdienai.lv/htdocs/yii(51): yii\base\Application->run()
+#7 {main}
+2021-04-02 21:55:50 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-02 21:55:50 [-][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\console\Request::getUserIP() in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(407): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(336): yii\debug\Module->checkAccess()
+#2 [internal function]: yii\debug\Module->setDebugHeaders()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php(628): call_user_func()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/web/Response.php(345): yii\base\Component->trigger()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#6 /mnt/www/projekti/precesikdienai.lv/htdocs/yii(51): yii\base\Application->run()
+#7 {main}
+2021-04-02 21:55:50 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-02 21:55:50 [-][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\console\Request::getAbsoluteUrl()' 
+
+in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(202): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(55): yii\debug\LogTarget->collectSummary()
+#2 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(136): yii\debug\LogTarget->export()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Dispatcher.php(191): yii\debug\LogTarget->collect()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Logger.php(182): yii\log\Dispatcher->dispatch()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/ErrorHandler.php(137): yii\log\Logger->flush()
+#6 [internal function]: yii\base\ErrorHandler->handleException()
+#7 {main}
+2021-04-02 21:55:50 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-02 21:55:50 [-][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\console\Request::getAbsoluteUrl()' 
+
+in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(202): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(55): yii\debug\LogTarget->collectSummary()
+#2 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(136): yii\debug\LogTarget->export()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Dispatcher.php(191): yii\debug\LogTarget->collect()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Logger.php(182): yii\log\Dispatcher->dispatch()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/ErrorHandler.php(137): yii\log\Logger->flush()
+#6 [internal function]: yii\base\ErrorHandler->handleException()
+#7 {main}
+2021-04-02 21:55:50 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-03 08:20:52 [-][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\console\Request::getUserIP() in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(407): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(336): yii\debug\Module->checkAccess()
+#2 [internal function]: yii\debug\Module->setDebugHeaders()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php(628): call_user_func()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/web/Response.php(345): yii\base\Component->trigger()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#6 /mnt/www/projekti/precesikdienai.lv/htdocs/yii(51): yii\base\Application->run()
+#7 {main}
+2021-04-03 08:20:52 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-03 08:20:52 [-][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\console\Request::getUserIP() in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(407): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(336): yii\debug\Module->checkAccess()
+#2 [internal function]: yii\debug\Module->setDebugHeaders()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php(628): call_user_func()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/web/Response.php(345): yii\base\Component->trigger()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#6 /mnt/www/projekti/precesikdienai.lv/htdocs/yii(51): yii\base\Application->run()
+#7 {main}
+2021-04-03 08:20:52 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-03 08:20:52 [-][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\console\Request::getAbsoluteUrl()' 
+
+in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(202): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(55): yii\debug\LogTarget->collectSummary()
+#2 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(136): yii\debug\LogTarget->export()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Dispatcher.php(191): yii\debug\LogTarget->collect()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Logger.php(182): yii\log\Dispatcher->dispatch()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/ErrorHandler.php(137): yii\log\Logger->flush()
+#6 [internal function]: yii\base\ErrorHandler->handleException()
+#7 {main}
+2021-04-03 08:20:52 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-03 08:20:52 [-][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\console\Request::getAbsoluteUrl()' 
+
+in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(202): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(55): yii\debug\LogTarget->collectSummary()
+#2 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(136): yii\debug\LogTarget->export()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Dispatcher.php(191): yii\debug\LogTarget->collect()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Logger.php(182): yii\log\Dispatcher->dispatch()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/ErrorHandler.php(137): yii\log\Logger->flush()
+#6 [internal function]: yii\base\ErrorHandler->handleException()
+#7 {main}
+2021-04-03 08:20:52 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-03 08:26:36 [-][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\console\Request::getUserIP() in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(407): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(336): yii\debug\Module->checkAccess()
+#2 [internal function]: yii\debug\Module->setDebugHeaders()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php(628): call_user_func()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/web/Response.php(345): yii\base\Component->trigger()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#6 /mnt/www/projekti/precesikdienai.lv/htdocs/yii(51): yii\base\Application->run()
+#7 {main}
+2021-04-03 08:26:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-03 08:26:36 [-][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\console\Request::getUserIP() in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(407): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(336): yii\debug\Module->checkAccess()
+#2 [internal function]: yii\debug\Module->setDebugHeaders()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php(628): call_user_func()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/web/Response.php(345): yii\base\Component->trigger()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#6 /mnt/www/projekti/precesikdienai.lv/htdocs/yii(51): yii\base\Application->run()
+#7 {main}
+2021-04-03 08:26:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-03 08:26:36 [-][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\console\Request::getAbsoluteUrl()' 
+
+in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(202): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(55): yii\debug\LogTarget->collectSummary()
+#2 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(136): yii\debug\LogTarget->export()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Dispatcher.php(191): yii\debug\LogTarget->collect()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Logger.php(182): yii\log\Dispatcher->dispatch()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/ErrorHandler.php(137): yii\log\Logger->flush()
+#6 [internal function]: yii\base\ErrorHandler->handleException()
+#7 {main}
+2021-04-03 08:26:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-03 08:26:36 [-][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\console\Request::getAbsoluteUrl()' 
+
+in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(202): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(55): yii\debug\LogTarget->collectSummary()
+#2 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(136): yii\debug\LogTarget->export()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Dispatcher.php(191): yii\debug\LogTarget->collect()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Logger.php(182): yii\log\Dispatcher->dispatch()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/ErrorHandler.php(137): yii\log\Logger->flush()
+#6 [internal function]: yii\base\ErrorHandler->handleException()
+#7 {main}
+2021-04-03 08:26:36 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-03 08:28:28 [-][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\console\Request::getUserIP() in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(407): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(336): yii\debug\Module->checkAccess()
+#2 [internal function]: yii\debug\Module->setDebugHeaders()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php(628): call_user_func()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/web/Response.php(345): yii\base\Component->trigger()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#6 /mnt/www/projekti/precesikdienai.lv/htdocs/yii(51): yii\base\Application->run()
+#7 {main}
+2021-04-03 08:28:28 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-03 08:28:28 [-][-][-][error][yii\base\UnknownMethodException] yii\base\UnknownMethodException: Calling unknown method: yii\console\Request::getUserIP() in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(407): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/Module.php(336): yii\debug\Module->checkAccess()
+#2 [internal function]: yii\debug\Module->setDebugHeaders()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php(628): call_user_func()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/web/Response.php(345): yii\base\Component->trigger()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Application.php(398): yii\web\Response->send()
+#6 /mnt/www/projekti/precesikdienai.lv/htdocs/yii(51): yii\base\Application->run()
+#7 {main}
+2021-04-03 08:28:28 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-03 08:28:28 [-][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\console\Request::getAbsoluteUrl()' 
+
+in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(202): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(55): yii\debug\LogTarget->collectSummary()
+#2 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(136): yii\debug\LogTarget->export()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Dispatcher.php(191): yii\debug\LogTarget->collect()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Logger.php(182): yii\log\Dispatcher->dispatch()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/ErrorHandler.php(137): yii\log\Logger->flush()
+#6 [internal function]: yii\base\ErrorHandler->handleException()
+#7 {main}
+2021-04-03 08:28:28 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-03 08:28:28 [-][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\console\Request::getAbsoluteUrl()' 
+
+in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(202): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(55): yii\debug\LogTarget->collectSummary()
+#2 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(136): yii\debug\LogTarget->export()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Dispatcher.php(191): yii\debug\LogTarget->collect()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Logger.php(182): yii\log\Dispatcher->dispatch()
+#5 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/ErrorHandler.php(137): yii\log\Logger->flush()
+#6 [internal function]: yii\base\ErrorHandler->handleException()
+#7 {main}
+2021-04-03 08:28:28 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-06 17:43:09 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "catalog/product-import". in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction()
+#2 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/yii(51): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "catalog/product-import". in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/console/Application.php:184
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest()
+#2 /mnt/www/projekti/precesikdienai.lv/htdocs/yii(51): yii\base\Application->run()
+#3 {main}
+2021-04-06 17:43:09 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-06 17:43:09 [-][-][-][error][yii\console\UnknownCommandException] yii\base\InvalidRouteException: Unable to resolve the request "catalog/product-import". in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Module.php:543
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/console/Application.php(181): yii\base\Module->runAction()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction()
+#2 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/yii(51): yii\base\Application->run()
+#4 {main}
+
+Next yii\console\UnknownCommandException: Unknown command "catalog/product-import". in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/console/Application.php:184
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/console/Application.php(148): yii\console\Application->runAction()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Application.php(392): yii\console\Application->handleRequest()
+#2 /mnt/www/projekti/precesikdienai.lv/htdocs/yii(51): yii\base\Application->run()
+#3 {main}
+2021-04-06 17:43:09 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-06 17:43:09 [-][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\console\Request::getAbsoluteUrl()' 
+
+in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(202): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(55): yii\debug\LogTarget->collectSummary()
+#2 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(136): yii\debug\LogTarget->export()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Dispatcher.php(191): yii\debug\LogTarget->collect()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Logger.php(182): yii\log\Dispatcher->dispatch()
+#5 [internal function]: yii\log\Logger->flush()
+#6 {main}
+2021-04-06 17:43:09 [-][-][-][info][application] $_GET = []
+
+$_POST = []
+2021-04-06 17:43:09 [-][-][-][warning][yii\log\Dispatcher::dispatch] Unable to send log via yii\debug\LogTarget: Exception 'yii\base\UnknownMethodException' with message 'Calling unknown method: yii\console\Request::getAbsoluteUrl()' 
+
+in /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/base/Component.php:301
+
+Stack trace:
+#0 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(202): yii\base\Component->__call()
+#1 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(55): yii\debug\LogTarget->collectSummary()
+#2 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2-debug/src/LogTarget.php(136): yii\debug\LogTarget->export()
+#3 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Dispatcher.php(191): yii\debug\LogTarget->collect()
+#4 /mnt/www/projekti/precesikdienai.lv/htdocs/vendor/yiisoft/yii2/log/Logger.php(182): yii\log\Dispatcher->dispatch()
+#5 [internal function]: yii\log\Logger->flush()
+#6 {main}
+2021-04-06 17:43:09 [-][-][-][info][application] $_GET = []
+
+$_POST = []

@@ -106,6 +106,9 @@ class CartSubView extends \yii\bootstrap\Widget
      */
     public $isConfirm = false;
 
+    public $transactionPrice;
+
+    public $showDeleteButtons = true;
 
     /**
      * @inheritdoc
@@ -169,7 +172,17 @@ class CartSubView extends \yii\bootstrap\Widget
      */
     protected function getFullViewParams()
     {
-        $this->totalPrice       = $this->totalUnitPrice + $this->totalTax + $this->shippingPrice;
+        $order = ApplicationUtil::getCheckoutFormModel('order');
+
+        $transactionFee = 0;
+
+        if(!empty($order->orderPaymentDetails)) {
+            $paymentDetails = $order->orderPaymentDetails;
+
+            $this->transactionPrice = $paymentDetails->transaction_fee;
+        }
+
+        $this->totalPrice       = $this->totalUnitPrice + $this->totalTax + $this->shippingPrice + $transactionFee;
         $this->totalPrice       = number_format($this->totalPrice, 2, ".", "");
         $params = ['items' => $this->getRows(), 
                     'isEmpty' => $this->isEmpty, 
@@ -181,7 +194,9 @@ class CartSubView extends \yii\bootstrap\Widget
                     'cart'  => $this->cart,
                     'itemCount' => $this->itemCount,
                     'currencyCode' => $this->getCurrencyCode(),
-                    'isConfirm' => $this->isConfirm
+                    'isConfirm' => $this->isConfirm,
+                    'transactionPrice' => $this->transactionPrice,
+                    'showDeleteButtons' => $this->showDeleteButtons,
                   ];
         return $this->beforeRenderingCart($params);
     }
@@ -199,8 +214,12 @@ class CartSubView extends \yii\bootstrap\Widget
             $this->isEmpty = false;
             foreach($products as $item)
             {
-                $viewParams = ['item' => $item, 'currencyCode' => $this->getCurrencyCode(),
-                                                                       'isConfirm' => $this->isConfirm];
+                $viewParams = [
+                    'item' => $item,
+                    'currencyCode' => $this->getCurrencyCode(),
+                    'isConfirm' => $this->isConfirm,
+                    'showDeleteButtons' => $this->showDeleteButtons,
+                ];
                 $viewParams = $this->beforeRenderingCartRow($viewParams);
                 $content .= $this->getView()->render($this->itemView, $viewParams);
             }

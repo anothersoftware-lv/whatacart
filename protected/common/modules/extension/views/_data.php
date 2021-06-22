@@ -18,7 +18,7 @@ if (!empty($copyFolders))
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
-                    <th><?php echo UsniAdaptor::t('extension', 'Source Folder'); ?></th>
+                    <th><?php echo UsniAdaptor::t('extension', 'LmImportSource Folder'); ?></th>
                     <th><?php echo UsniAdaptor::t('extension', 'Target Folder'); ?></th>
                 </tr>
             </thead>
@@ -46,7 +46,7 @@ if (!empty($copyFiles))
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
-                    <th><?php echo UsniAdaptor::t('extension', 'Source File'); ?></th>
+                    <th><?php echo UsniAdaptor::t('extension', 'LmImportSource File'); ?></th>
                     <th><?php echo UsniAdaptor::t('extension', 'Target Folder'); ?></th>
                 </tr>
             </thead>
@@ -74,7 +74,7 @@ if (!empty($deleteFiles))
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
-                    <th><?php echo UsniAdaptor::t('extension', 'Source File'); ?></th>
+                    <th><?php echo UsniAdaptor::t('extension', 'LmImportSource File'); ?></th>
                     <th><?php echo UsniAdaptor::t('extension', 'Target Folder'); ?></th>
                 </tr>
             </thead>
@@ -102,7 +102,7 @@ if (!empty($modifiedFiles))
         <table class="table table-striped table-bordered">
             <thead>
                 <tr>
-                    <th><?php echo UsniAdaptor::t('extension', 'Source File'); ?></th>
+                    <th><?php echo UsniAdaptor::t('extension', 'LmImportSource File'); ?></th>
                     <th><?php echo UsniAdaptor::t('extension', 'Target Folder'); ?></th>
                     <th><?php echo UsniAdaptor::t('extension', 'Operations'); ?></th>
                 </tr>

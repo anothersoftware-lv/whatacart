@@ -5,6 +5,7 @@
  */
 namespace customer\business;
 
+use common\modules\order\traits\InvoiceTrait;
 use customer\models\Customer;
 use usni\library\modules\users\models\Person;
 use usni\library\modules\users\models\Address;
@@ -40,6 +41,7 @@ class SiteManager extends Manager
     use \common\modules\localization\modules\orderstatus\traits\OrderStatusTrait;
     use \common\modules\payment\traits\PaymentTrait;
     use \products\traits\DownloadTrait;
+    use InvoiceTrait;
     
     /**
      * @inheritdoc
@@ -259,7 +261,7 @@ class SiteManager extends Manager
             $detailViewDTO->setEmptyOrder(true);
             return;
         }
-        if($order['created_by'] == $this->userId)
+        if($order['created_by'] == $this->userId || $order['created_by'] == 0)
         {
             //Order products
             $orderProducts  = OrderDAO::getOrderProducts($orderId, $this->language, true);
@@ -287,6 +289,7 @@ class SiteManager extends Manager
             $order['payment_method_name']   = $this->getPaymentMethodName($order['payment_method']);
             $order                          = $this->afterOrderPopulation($order);
             $order['netPayment']            = $this->getAmount($order);
+            $order['invoice']                = $this->getInvoice($order['invoiceId']);
             $detailViewDTO->setBrowseModels($this->getOrderViewBrowseModels($storeId));
             $detailViewDTO->setModel($order);
             $detailViewDTO->setIsValidOrder(true);

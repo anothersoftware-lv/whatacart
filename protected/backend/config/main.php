@@ -43,7 +43,21 @@ $config  = array(
                                                     'applicationCurrencyCookieName' => 'whatacartAdminCurrency'
                                                 ],
                         'errorHandler'      => ['errorAction' => 'home/default/error'],
-                    )
+                        'consoleRunner' => [
+                            'class' => 'vova07\console\ConsoleRunner',
+                            'file' => '@app/yii' // or an absolute path to console file
+                        ],
+                    ),
+                    'modules' => [
+                        'gridview' => [
+                            'class' => '\kartik\grid\Module'
+                            // enter optional module parameters below - only if you need to  
+                            // use your own export download action or custom translation 
+                            // message source
+                            // 'downloadAction' => 'gridview/export/download',
+                            // 'i18n' => []
+                        ]
+                    ]
                 );
 $instanceConfigFile = APPLICATION_PATH . '/protected/common/config/instanceConfig.php'; 
 if(file_exists($instanceConfigFile))

@@ -9,6 +9,7 @@ use usni\fontawesome\FA;
 use usni\library\widgets\Tabs;
 use usni\library\widgets\DetailBrowseDropdown;
 use products\behaviors\PriceBehavior;
+use common\modules\order\business\InvoiceManagerCustom as InvoiceManager;
 
 /* @var $detailViewDTO \common\modules\order\dto\DetailViewDTO */
 /* @var $this \usni\library\web\AdminView */
@@ -36,6 +37,16 @@ $browseParams   = ['permission' => 'order.viewother',
 echo DetailBrowseDropdown::widget($browseParams);
 $toolbarParams  = ['editUrl'            => UsniAdaptor::createUrl('order/default/update', ['id' => $model['id']]),
                    'deleteUrl'          => UsniAdaptor::createUrl('order/default/delete', ['id' => $model['id']])];
+
+$order = \common\modules\order\models\Order::findOne($model['id']);
+
+$invoices = $order->invoices;
+
+if(!empty($invoices[0])) {
+    $invoiceViewDTO = InvoiceManager::getInstance()->getInvoiceViewDTO($invoices[0]->id);
+}
+
+
 ?>
 <div class="panel panel-default detail-container">
     <div class="panel-heading">
@@ -51,22 +62,28 @@ $toolbarParams  = ['editUrl'            => UsniAdaptor::createUrl('order/default
                 'class' => 'active',
                 'content' => $this->render('/detail/_general', ['detailViewDTO' => $detailViewDTO])
             ];
-            if($model['billingAddress'] !== false)
-            {
+            //if($model['billingAddress'] !== false)
+            //{
                 $items[] = [
                     'options' => ['id' => 'tabbilling'],
                     'label' => UsniAdaptor::t('customer', 'Billing Address'),
                     'content' => $this->render('/detail/_billingaddress', ['detailViewDTO' => $detailViewDTO])
                 ];
-            }
-            if($model['shippingAddress'] !== false)
-            {
+            //}
+            //if($model['shippingAddress'] !== false)
+            //{
                 $items[] = [
                     'options' => ['id' => 'tabshipping'],
                     'label' => UsniAdaptor::t('customer', 'Shipping Address'),
                     'content' => $this->render('/detail/_shippingaddress', ['detailViewDTO' => $detailViewDTO])
                 ];
-            }
+            //}
+            $items[] = [
+                'options' => ['id' => 'tabinvoice'],
+                'label' => UsniAdaptor::t('order', 'Invoice'),
+                'content' => isset($invoiceViewDTO) ? $this->render('/invoice/view', ['detailViewDTO' => $invoiceViewDTO]) : ''
+            ];
+
             $items[] = [
                 'options' => ['id' => 'tabpayment'],
                 'label' => UsniAdaptor::t('order', 'Payment Details'),

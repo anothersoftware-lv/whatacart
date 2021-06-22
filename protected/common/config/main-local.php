@@ -7,7 +7,11 @@ $config = [
             'password'      => $password,
             'emulatePrepare'=> true,
             'tablePrefix'   => 'tbl_',
-            'schemaCache' => 'cache'
+            'schemaCache'   => 'cache',
+            'attributes'    => [
+                PDO::MYSQL_ATTR_LOCAL_INFILE => true,
+                PDO::ATTR_ERRMODE => PDO::ERRMODE_EXCEPTION,
+            ]
         ]
     ]
 ];

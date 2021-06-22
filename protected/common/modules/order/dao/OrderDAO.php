@@ -89,21 +89,23 @@ class OrderDAO
         $storeTable             = UsniAdaptor::tablePrefix() . 'store';
         $storeTrTable           = UsniAdaptor::tablePrefix() . 'store_translated';
         $currencyTable          = UsniAdaptor::tablePrefix() . 'currency';
+        $invoicesTable          = UsniAdaptor::tablePrefix() . 'invoice';
         $sql                    = "SELECT o.*, otr.shipping_comments, 
                                    op.payment_method, op.total_including_tax, op.tax, op.payment_type,
                                    optr.comments, 
                                    toad.firstname, toad.lastname, toad.email, toad.mobilephone, 
-                                   str.name as store_name, tc.symbol_left as currency_symbol
+                                   str.name as store_name, tc.symbol_left as currency_symbol, inv.id AS invoiceId
                                    FROM $orderTable o, $orderTrTable otr, $orderPaymentTable op, 
                                     $orderPaymentTrTable optr, $orderAddressTable toad,
-                                    $storeTable st, $storeTrTable str, $currencyTable tc
+                                    $storeTable st, $storeTrTable str, $currencyTable tc, $invoicesTable inv
                                    WHERE o.id = :id AND o.store_id = :sid AND o.id = otr.owner_id
                                    AND o.id = op.order_id 
                                    AND op.id = optr.owner_id AND otr.language = :lan1 
                                    AND optr.language = :lan2 
                                    AND o.id = toad.order_id AND toad.type = :type 
                                    AND o.store_id = st.id AND st.id = str.owner_id
-                                   AND str.language = :lan3 AND o.currency_code = tc.code";
+                                   AND str.language = :lan3 AND o.currency_code = tc.code
+                                   AND inv.order_id=o.id";
         $params                 = [':sid' => $storeId, ':id' => $orderId, ':lan1' => $language, ':lan2' => $language, 
                                     ':lan3' => $language, ':type' => Address::TYPE_BILLING_ADDRESS];
         $connection             = UsniAdaptor::app()->getDb();

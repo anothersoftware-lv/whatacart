@@ -4,14 +4,14 @@
     "keywords": ["whatacart", "ecommerce", "open source ecommerce"],
     "homepage": "http://www.whatacart.com/",
     "type": "project",
-    "license": "GPL-3.0-only",
+    "license": "GPLv3",
     "support": {
         "issues": "https://github.com/ushainformatique/whatacart/issues"
     },
-    "minimum-stability": "stable",
+    "prefer-stable": true,
     "require": {
-        "php": ">=5.4.0",
-        "yiisoft/yii2": ">=7.2",
+        "php": ">=7.4",
+        "yiisoft/yii2": ">=2.0.41",
         "yiisoft/yii2-bootstrap": "*",
         "yiisoft/yii2-swiftmailer": "2.0.7",
         "branchonline/yii2-lightbox": "*",
@@ -20,10 +20,23 @@
         "2amigos/yii2-taggable-behavior": "*",
         "2amigos/yii2-selectize-widget": "*",
         "kartik-v/yii2-widget-rating": "*",
-		"kartik-v/bootstrap-star-rating": "@dev",
+	"kartik-v/bootstrap-star-rating": "@dev",
         "marqu3s/yii2-summernote": "dev-master",
         "fortawesome/font-awesome": "v4.7.0",
-        "ushainformatique/yiichimp": "*"
+        "ushainformatique/yiichimp": "dev-master",
+        "stripe/stripe-php": "*",
+        "kartik-v/yii2-widget-select2": "dev-master",
+      "kartik-v/yii2-widget-sidenav": "*",
+      "paulzi/yii2-nested-sets": "^1.0",
+      "wokster/yii2-nested-sets-tree-behavior": "*",
+      "wbraganca/yii2-fancytree-widget": "*",
+      "creocoder/yii2-nested-sets": "0.9.*",
+      "kartik-v/yii2-sortable": "dev-master",
+      "kartik-v/yii2-grid": "dev-master",
+      "powerkernel/yii2-slugify": "*",
+      "vova07/yii2-console-runner-extension": "*",
+      "asinfotrack/yii2-webshell": "0.8.*",
+      "yii2tech/crontab": "*"
     },
     "require-dev": {
         "yiisoft/yii2-debug": "*",
@@ -45,6 +58,10 @@
       {
         "type": "git",
         "url": "gitlab:anothersoftware-whatacart/core/yiichimp.git"
+      },
+      {
+        "type": "composer",
+        "url": "https://asset-packagist.org"
       }
     ]
 }

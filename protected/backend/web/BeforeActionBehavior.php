@@ -65,7 +65,7 @@ class BeforeActionBehavior extends Behavior
         //$selectedStore = UsniAdaptor::app()->storeManager->selectedStore;
     
         //  Stupid tmp fix
-        $selectedStore = ['theme' => 'lm-whatacart']; 
+        $selectedStore = ['theme' => 'whatacart']; 
         
         if($selectedStore['theme'] != null)
         {
