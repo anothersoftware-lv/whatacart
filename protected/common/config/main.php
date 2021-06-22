@@ -17,6 +17,10 @@ return ArrayHelper::merge(
                                             'poweredByName' => 'WhatACart',
                                             'poweredByUrl'  => 'http://whatacart.com',
                                             'environment'   => $environment,
+                                            'aliases' => [
+                                                '@bower' => '@vendor/bower-asset',
+                                                '@npm' => '@vendor/npm-asset',
+                                            ],
                                             'components' => [
                                                 'authorizationManager' => ['class' => 'usni\library\modules\auth\business\AuthManager'],
                                                 'cache' => [
